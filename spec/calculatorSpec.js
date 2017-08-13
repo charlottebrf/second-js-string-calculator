@@ -8,8 +8,12 @@ describe("Calculator", function() {
     calculator = Calculator();
   });
 
-  it("adds integers", function() {
-    expect(calculator.add("1", "2")).toEqual(3);
+  fit("adds integers", function() {
+    expect(calculator.add("1,2")).toEqual(3);
+  });
+
+  it("returns a single integer", function() {
+    expect(calculator.add("1")).toEqual(1);
   });
 
 });
