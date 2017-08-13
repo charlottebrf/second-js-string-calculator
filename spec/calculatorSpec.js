@@ -22,4 +22,10 @@ describe("Calculator", function() {
     });
   });
 
+  describe("integers separated by a new line", function() {
+    it("adds integers", function() {
+      expect(calculator.add("1\n2")).toEqual(3);
+    });
+  });
+
 });
