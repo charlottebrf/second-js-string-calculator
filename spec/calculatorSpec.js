@@ -26,6 +26,10 @@ describe("Calculator", function() {
     it("adds integers", function() {
       expect(calculator.add("1\n2")).toEqual(3);
     });
+
+    it("adds integers", function() {
+      expect(calculator.add("1\n,2")).toEqual(3);
+    });
   });
 
 });
