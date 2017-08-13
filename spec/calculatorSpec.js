@@ -8,7 +8,7 @@ describe("Calculator", function() {
     calculator = Calculator();
   });
 
-  it("should be able to return the a string number as an integer", function() {
+  it("adds integers", function() {
     expect(calculator.add(1,2)).toEqual(3);
   });
 });
