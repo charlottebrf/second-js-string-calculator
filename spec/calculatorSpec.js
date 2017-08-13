@@ -8,7 +8,7 @@ describe("Calculator", function() {
     calculator = Calculator();
   });
 
-  fit("adds integers", function() {
+  it("adds integers", function() {
     expect(calculator.add("1,2")).toEqual(3);
   });
 
@@ -16,4 +16,7 @@ describe("Calculator", function() {
     expect(calculator.add("1")).toEqual(1);
   });
 
+  it("returns 0 when given an empty string", function() {
+    expect(calculator.add("")).toEqual(0);
+  });
 });
