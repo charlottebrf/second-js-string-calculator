@@ -9,7 +9,7 @@ describe("Calculator", function() {
   });
 
   it("adds integers", function() {
-    expect(calculator.add(1,2)).toEqual(3);
+    expect(calculator.add("1", "2")).toEqual(3);
   });
 
 });
