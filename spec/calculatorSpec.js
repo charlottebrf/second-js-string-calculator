@@ -30,6 +30,10 @@ describe("Calculator", function() {
     it("adds integers", function() {
       expect(calculator.add("1\n,2")).toEqual(3);
     });
+
+    it("adds integers with different delimiters", function() {
+      expect(calculator.add("//;\n1;2")).toEqual(3);
+    })
   });
 
 });
