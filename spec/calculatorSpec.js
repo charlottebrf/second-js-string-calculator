@@ -51,8 +51,11 @@ describe("Calculator", function() {
   })
 
   describe("doesn't calculate the sum of a number greater than 1000", function() {
-    it("ignores integers of 1000 or more", function() {
+    it("ignores integers of 1000", function() {
       expect(calculator.add("//;;\n1;2; 10000")).toEqual(3);
+    })
+    it("ignores integers greater than 1000", function() {
+      expect(calculator.add("//;;1005\n1;*2;")).toEqual(3);
     })
   })
 
