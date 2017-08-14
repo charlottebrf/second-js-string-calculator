@@ -41,4 +41,10 @@ describe("Calculator", function() {
     })
   });
 
+  describe("doesn't allow sum of negative numbers to be calculated", function() {
+    it("raises an error for a negative number", function() {
+      expect(calculator.add("-1;2")).toEqual(2);
+    })
+  })
+
 });
