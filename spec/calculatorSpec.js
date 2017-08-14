@@ -22,7 +22,7 @@ describe("Calculator", function() {
     });
   });
 
-  describe("integers separated by a new line", function() {
+  describe("calculates sum of integers separated by different non-digit delimiters", function() {
     it("adds integers", function() {
       expect(calculator.add("1\n2")).toEqual(3);
     });
@@ -33,6 +33,11 @@ describe("Calculator", function() {
 
     it("adds integers with different delimiters", function() {
       expect(calculator.add("//;\n1;2")).toEqual(3);
+      expect(calculator.add("*\n1;2")).toEqual(3);
+    })
+
+    it("adds integers with more than one different delimiters", function() {
+      expect(calculator.add("//;;\n1;2")).toEqual(3);
     })
   });
 
