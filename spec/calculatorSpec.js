@@ -45,7 +45,7 @@ describe("Calculator", function() {
     it("raises an error for a negative number", function() {
       expect( function(){ calculator.add("-1;2"); } ).toThrow('negatives not allowed: -1');
     })
-    xit("raises an for multiple negative numbers", function() {
+    it("raises an for multiple negative numbers", function() {
       expect( function() { calculator.add("3, -1, -2, 4"); } ).toThrow('negatives not allowed: -1, -2')
     })
   })
