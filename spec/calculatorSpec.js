@@ -50,4 +50,10 @@ describe("Calculator", function() {
     })
   })
 
+  describe("doesn't calculate the sum of a number greater than 1000", function() {
+    it("ignores integers of 1000 or more", function() {
+      expect(calculator.add("//;;\n1;2; 10000")).toEqual(3);
+    })
+  })
+
 });
