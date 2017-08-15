@@ -34,29 +34,32 @@ describe("Calculator", function() {
     it("adds integers with different delimiters", function() {
       expect(calculator.add("//;\n1;2")).toEqual(3);
       expect(calculator.add("*\n1;2")).toEqual(3);
-    })
+    });
 
     it("adds integers with more than one different delimiters", function() {
       expect(calculator.add("//;;\n1;2")).toEqual(3);
-    })
+    });
+
+    it("adds integers with multiple delimters", function() {
+      expect(calculator.add("//[*][%]\n1*12%3")).toEqual(16);
+    });
   });
 
   describe("doesn't allow sum of negative numbers to be calculated", function() {
     it("raises an error for a negative number", function() {
       expect( function(){ calculator.add("-1;2"); } ).toThrow('negatives not allowed: -1');
-    })
+    });
     it("raises an for multiple negative numbers", function() {
       expect( function() { calculator.add("3, -1, -2, 4"); } ).toThrow('negatives not allowed: -1, -2')
-    })
-  })
+    });
+  });
 
   describe("doesn't calculate the sum of a number greater than 1000", function() {
     it("ignores integers of 1000", function() {
       expect(calculator.add("//;;\n1;2; 10000")).toEqual(3);
-    })
+    });
     it("ignores integers greater than 1000", function() {
       expect(calculator.add("//;;1005\n1;*2;")).toEqual(3);
-    })
-  })
-
+    });
+  });
 });

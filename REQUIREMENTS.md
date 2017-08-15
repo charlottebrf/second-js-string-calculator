@@ -24,5 +24,5 @@ The method can take 0, 1 or 2 numbers, and will return their sum (for an empty s
 stop here if you are a beginner. Continue if you can finish the steps so far in less than 30 minutes.
 - Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 21
 - Delimiters can be of any length with the following format:  “//[delimiter]\n” for example: “//[]\n123" should return 6
-- Allow multiple delimiters like this:  “//[delim1][delim2]\n” for example “//[*][%]\n1*12%3” should return 6.
+- Allow multiple delimiters like this:  “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.
 make sure you can also handle multiple delimiters with length longer than one char
